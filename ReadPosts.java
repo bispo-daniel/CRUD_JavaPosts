@@ -21,7 +21,7 @@ public class ReadPosts {
                 String title = res.getString(3);
                 String content = res.getString(4);
 
-                String row = "    %s Posted %s\n\n        Title: %s\n        %s \n\n";
+                String row = "    %s Posted %s\n\n        %s\n        %s \n\n";
                 everyRow += String.format(row, username, date, title, content);
             }
 
@@ -40,5 +40,4 @@ public class ReadPosts {
         
         Main.isLogged();
     }
-
 }
