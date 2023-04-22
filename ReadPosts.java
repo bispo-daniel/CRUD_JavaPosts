@@ -11,7 +11,7 @@ public class ReadPosts {
     static void read(){
         everyRow = "";
         try{
-            String sql = "SELECT u.username, p.posted, p.title, p.content FROM post p JOIN user u ON p.fk_user_id = u.id";
+            String sql = "SELECT u.username, p.posted, p.title, p.content FROM post p JOIN user u ON p.fk_user_id = u.id ORDER BY p.posted DESC";
             Statement stt = Connect.connection.createStatement();
             ResultSet res = stt.executeQuery(sql);
 
@@ -21,7 +21,7 @@ public class ReadPosts {
                 String title = res.getString(3);
                 String content = res.getString(4);
 
-                String row = "    %s Posted %s\n\n        %s\n        %s \n\n";
+                String row = "    @%s Posted %s\n\n        %s\n        %s \n\n";
                 everyRow += String.format(row, username, date, title, content);
             }
 
