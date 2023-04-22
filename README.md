@@ -1,6 +1,6 @@
 # CRUD on MySQL database with Java
     Application developed to allow users create posts. 
-        Each post has an title and content.
+        Each post has a title and content.
 
     At the landing page the user can login or create an account.
     Logged in the user can create posts or read posts.
